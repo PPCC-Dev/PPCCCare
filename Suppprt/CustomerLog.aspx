@@ -392,6 +392,11 @@
                         </div>
                         <div class="modal-footer">
 
+                            <div id="btnReplyAccept" class="btnReplyAccept mr-auto" runat="server">
+                                <asp:Button ID="Button1" runat="server" Text="Not Accept" class="btn btn-notaccept btn-danger btn-sm" OnClick="btn_notacceptclick" />
+                                <asp:Button ID="Button2" runat="server" Text="Accept" class="btn btn-accept btn-sm" OnClick="btn_acceptclick" />
+                            </div>
+
                             <asp:Button ID="btnReply" runat="server" Text="Reply" class="btn button btn-sm"  OnClick="btnReply_Click" />
                             <asp:Button ID="btnClose" runat="server" Text="Close" class="btn button_cancel btn-sm" data-dismiss="modal" />
                         </div>

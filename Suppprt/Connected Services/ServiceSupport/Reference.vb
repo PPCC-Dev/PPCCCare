@@ -342,6 +342,13 @@ Namespace ServiceSupport
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/GetResponse", ReplyAction:="*")>  _
         Function GetResponseAsync() As System.Threading.Tasks.Task(Of System.Data.DataTable)
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/UpdateReplyStatusLog", ReplyAction:="*"),  _
+         System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults:=true)>  _
+        Function UpdateReplyStatusLog(ByVal sLogID As String, ByVal sStat As String) As System.Data.DataTable
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/UpdateReplyStatusLog", ReplyAction:="*")>  _
+        Function UpdateReplyStatusLogAsync(ByVal sLogID As String, ByVal sStat As String) As System.Threading.Tasks.Task(Of System.Data.DataTable)
     End Interface
     
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
@@ -731,6 +738,14 @@ Namespace ServiceSupport
         
         Public Function GetResponseAsync() As System.Threading.Tasks.Task(Of System.Data.DataTable) Implements ServiceSupport.ServiceSupportSoap.GetResponseAsync
             Return MyBase.Channel.GetResponseAsync
+        End Function
+        
+        Public Function UpdateReplyStatusLog(ByVal sLogID As String, ByVal sStat As String) As System.Data.DataTable Implements ServiceSupport.ServiceSupportSoap.UpdateReplyStatusLog
+            Return MyBase.Channel.UpdateReplyStatusLog(sLogID, sStat)
+        End Function
+        
+        Public Function UpdateReplyStatusLogAsync(ByVal sLogID As String, ByVal sStat As String) As System.Threading.Tasks.Task(Of System.Data.DataTable) Implements ServiceSupport.ServiceSupportSoap.UpdateReplyStatusLogAsync
+            Return MyBase.Channel.UpdateReplyStatusLogAsync(sLogID, sStat)
         End Function
     End Class
 End Namespace

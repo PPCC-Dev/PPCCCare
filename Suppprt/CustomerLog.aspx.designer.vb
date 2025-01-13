@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class CustomerLog
-    
+
     '''<summary>
     '''ScriptManager1 control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
-    
+
     '''<summary>
     '''UpdatePanel1 control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UpdatePanel1 As Global.System.Web.UI.UpdatePanel
-    
+
     '''<summary>
     '''search_param control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents search_param As Global.System.Web.UI.WebControls.HiddenField
-    
+
     '''<summary>
     '''txtSearch control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''btnSearch control.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.LinkButton
-    
+
     '''<summary>
     '''txtFilterDate control.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtFilterDate As Global.System.Web.UI.WebControls.TextBox
-    
+
     '''<summary>
     '''ddlFilterStat control.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlFilterStat As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''ddlFilterType control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlFilterType As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''ddlFilterRequestor control.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlFilterRequestor As Global.System.Web.UI.WebControls.DropDownList
-    
+
     '''<summary>
     '''UpdatePanel2 control.
     '''</summary>
@@ -102,7 +102,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents UpdatePanel2 As Global.System.Web.UI.UpdatePanel
-    
+
     '''<summary>
     '''GridView1 control.
     '''</summary>
@@ -111,7 +111,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents GridView1 As Global.System.Web.UI.WebControls.GridView
-    
+
     '''<summary>
     '''lblLodIdDet control.
     '''</summary>
@@ -120,7 +120,34 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblLodIdDet As Global.System.Web.UI.WebControls.Label
-    
+
+    '''<summary>
+    '''btnReplyAccept control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnReplyAccept As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Button1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Button2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Button2 As Global.System.Web.UI.WebControls.Button
+
     '''<summary>
     '''btnReply control.
     '''</summary>
@@ -129,7 +156,7 @@ Partial Public Class CustomerLog
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnReply As Global.System.Web.UI.WebControls.Button
-    
+
     '''<summary>
     '''btnClose control.
     '''</summary>

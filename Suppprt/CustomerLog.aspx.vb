@@ -3,6 +3,9 @@ Imports System.Web.Services
 Imports System.Xml
 Imports System.Drawing
 Imports System.Globalization
+Imports Microsoft.SqlServer.Server
+Imports System.Diagnostics.Eventing
+Imports Microsoft.Office.Core
 
 Public Class CustomerLog
     Inherits System.Web.UI.Page
@@ -153,7 +156,7 @@ Public Class CustomerLog
 
                     lblStat.CssClass = "badge badge-warning text-wrap"
 
-                ElseIf lblStat.Text = "IssueList" Then
+                ElseIf lblStat.Text = "IssueList" Or lblStat.Text = "Not Accept" Then
 
                     lblStat.CssClass = "badge badge-danger text-wrap"
 
@@ -306,7 +309,7 @@ Public Class CustomerLog
 
     Protected Sub btnUpdate_Click(sender As Object, e As EventArgs)
         Dim LogId As String
-        Dim url As String = Page.ResolveUrl("CustomerLogDetail.aspx")
+        Dim url As String = Page.ResolveUrl("CustomerLogDetails.aspx")
         Dim fullurl As String = ""
         Dim parameter As String = ""
         Dim btn As LinkButton = CType(sender, LinkButton)
@@ -393,6 +396,92 @@ Public Class CustomerLog
             End If
         Else
             GridView1.Columns(3).Visible = False
+        End If
+    End Sub
+    Protected Function GetStatusDescription(ByVal statusCode As String) As String
+        Select Case statusCode
+            Case "C"
+                Return "Closed"
+            Case "D"
+                Return "Initiated"
+            Case "F"
+                Return "Awaiting Infor"
+            Case "I"
+                Return "In Process"
+            Case "M"
+                Return "Monitor"
+            Case "N"
+                Return "Not Agreed"
+            Case "O"
+                Return "Open"
+            Case "P"
+                Return "Internal PPCC UC"
+            Case "S"
+                Return "Solution Finding"
+            Case "T"
+                Return "Test and QA PPCC UC"
+            Case "V"
+                Return "Investigate"
+            Case "W"
+                Return "Awaiting Customer"
+            Case Else
+                Return "Invalid status code"
+        End Select
+
+
+    End Function
+    Protected Sub btn_notacceptclick(sender As Object, e As EventArgs)
+        Dim LogId As String
+        Dim msg_updatereturn As String
+        Dim oWS As New ServiceSupport.ServiceSupportSoapClient
+        dt = New DataTable
+        ds = New DataSet
+
+        LogId = lblLodIdDet.Text.ToString()
+        dt = oWS.UpdateReplyStatusLog(LogId, "N")
+
+        ds.Tables.Add(dt)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+
+            For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
+                msg_updatereturn = ds.Tables(0).Rows(i)("Message").ToString
+            Next
+
+        End If
+        'MsgBox(msg_updatereturn, MsgBoxStyle.Information, "PPCC_Update Status")
+        ClientScript.RegisterStartupScript([GetType](), "alert", script:=$"alert('{msg_updatereturn}');", True)
+    End Sub
+    Protected Sub btn_acceptclick(sender As Object, e As EventArgs)
+        Dim LogId As String
+        Dim msg_updatereturn As String
+        Dim oWS As New ServiceSupport.ServiceSupportSoapClient
+        dt = New DataTable
+        ds = New DataSet
+
+        LogId = lblLodIdDet.Text.ToString()
+        dt = oWS.UpdateReplyStatusLog(LogId, "A")
+
+        ds.Tables.Add(dt)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+
+            For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
+                msg_updatereturn = ds.Tables(0).Rows(i)("Message").ToString
+            Next
+
+        End If
+        'MsgBox(msg_updatereturn, MsgBoxStyle.Information, "PPCC_Update Status")
+        ClientScript.RegisterStartupScript(Me.GetType(), "alert", $"alert('{msg_updatereturn}');", True)
+    End Sub
+    Protected Sub CheckStatusAndHideDiv(ByVal status As String)
+
+        ClientScript.RegisterStartupScript(Me.GetType(), "alert", $"alert('{status}');", True)
+
+        If status = "Awaiting Customer" Then
+            btnReplyAccept.Visible = False
+        Else
+            btnReplyAccept.Visible = True
         End If
     End Sub
 End Class

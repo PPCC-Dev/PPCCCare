@@ -3,6 +3,7 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Net
 
 ' To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
 ' <System.Web.Script.Services.ScriptService()> _
@@ -1573,6 +1574,49 @@ Public Class ServiceSupport
                 .Connection = SqlCon
                 .CommandText = strSQL.ToString()
                 .CommandType = CommandType.StoredProcedure
+            End With
+
+            da.SelectCommand = SqlCmd
+            da.Fill(ds)
+            dt = ds.Tables(0)
+
+            ' Trans.Commit()
+
+            da = Nothing
+            SqlCon.Close()
+            SqlCon = Nothing
+
+        Catch ex As Exception
+            'Trans.Rollback()
+        End Try
+
+        Return dt
+    End Function
+    <WebMethod()>
+    Public Function UpdateReplyStatusLog(sLogID As String, sStat As String) As DataTable
+
+        Dim SqlCon As New SqlConnection
+        Dim SqlCmd As New SqlCommand
+        Dim dt As New DataTable("data")
+        Dim da As New SqlDataAdapter
+        Dim ds As New DataSet
+        Dim strConnString, Result As String
+        Dim strSQL As New StringBuilder
+
+        Result = ""
+
+        strConnString = strConn
+        SqlCon.ConnectionString = strConnString
+        strSQL.Append("PPCC_UpdateReplyStatusSP")
+
+        Try
+            SqlCon.ConnectionString = strConnString
+            With SqlCmd
+                .Connection = SqlCon
+                .CommandText = strSQL.ToString()
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@log_id", sLogID)
+                .Parameters.AddWithValue("@TypeReply", sStat)
             End With
 
             da.SelectCommand = SqlCmd

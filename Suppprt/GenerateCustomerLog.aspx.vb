@@ -411,7 +411,7 @@ Public Class GenerateCustomerLog
                                       String.Empty, 'LongTermSol
                                       ddlRequestTime.SelectedItem.Text,
                                       String.Empty, 'Acknowledge
-                                      String.Empty, 'ResponseDate
+                                      Date.Now.ToString("dd/MM/yyyy"), 'ResponseDate
                                       String.Empty, 'ResponseTime
                                       Session("Username").ToString())
 

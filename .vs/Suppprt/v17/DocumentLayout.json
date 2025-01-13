@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|Suppprt\\Support.vbproj|C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\suppprt\\signin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|Suppprt\\Support.vbproj|solutionrelative:suppprt\\signin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95EEDE57-72D4-4B14-B30B-3B040156B48A}|ServiceSupport\\ServiceSupport.vbproj|c:\\users\\thika\\desktop\\ppcc_care\\ppcccare\\servicesupport\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{95EEDE57-72D4-4B14-B30B-3B040156B48A}|ServiceSupport\\ServiceSupport.vbproj|solutionrelative:servicesupport\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|Suppprt\\Support.vbproj|C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\suppprt\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}|Suppprt\\Support.vbproj|solutionrelative:suppprt\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\ServiceSupport\\Web.config",
+              "RelativeDocumentMoniker": "ServiceSupport\\Web.config",
+              "ToolTip": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\ServiceSupport\\Web.config",
+              "RelativeToolTip": "ServiceSupport\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-13T04:30:19.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\Suppprt\\Web.config",
+              "RelativeDocumentMoniker": "Suppprt\\Web.config",
+              "ToolTip": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\Suppprt\\Web.config",
+              "RelativeToolTip": "Suppprt\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-13T02:49:23.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Signin.aspx",
+              "DocumentMoniker": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\Suppprt\\Signin.aspx",
+              "RelativeDocumentMoniker": "Suppprt\\Signin.aspx",
+              "ToolTip": "C:\\Users\\thika\\Desktop\\PPCC_Care\\PPCCCare\\Suppprt\\Signin.aspx",
+              "RelativeToolTip": "Suppprt\\Signin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-01-13T01:15:45.033Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

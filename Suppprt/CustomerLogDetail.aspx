@@ -195,7 +195,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="txtSubject">Subject</label>
-                                <asp:TextBox ID="txtSubject" runat="server" class="form-control input_user"></asp:TextBox>
+                                <asp:TextBox ID="txtSubject" runat="server" class="form-control input_user" disabled="True" ></asp:TextBox>
                             </div>
                         </div>
 

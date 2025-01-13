@@ -140,6 +140,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="CustomerLogDetail.aspx" />
+    <Content Include="CustomerLogDetails.aspx" />
     <Content Include="datepicker\bootstrap-datepicker.css" />
     <Content Include="datepicker\bootstrap-datepicker.min.js" />
     <Content Include="css\hr-style.css" />
@@ -2056,6 +2057,13 @@
     <Compile Include="CustomerLogDetail.aspx.vb">
       <DependentUpon>CustomerLogDetail.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerLogDetails.aspx.designer.vb">
+      <DependentUpon>CustomerLogDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerLogDetails.aspx.vb">
+      <DependentUpon>CustomerLogDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
